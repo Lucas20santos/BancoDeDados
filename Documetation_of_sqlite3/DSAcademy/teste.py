@@ -13,5 +13,5 @@ sql_comandos = ["""create table if not exists produtos (
 );"""]
 
 for sql in sql_comandos:
-    pass
+    c.sql_create(sql)
 

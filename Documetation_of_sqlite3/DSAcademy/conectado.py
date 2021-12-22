@@ -1,15 +1,18 @@
 import sqlite3
 from sqlite3 import Error
+import os
+
+PATH = os.getcwd()
 
 class conectado:
     def __init__(self) -> None:
         self.con = None
     
-    def conectando(self, PATH_LOCAL: str):
+    def conectando(self, name):
         try:
-            self.con = sqlite3.connect(PATH_LOCAL + "/escola.db")
+            self.con = sqlite3.connect(PATH + f"/{name}.db")
         except Error as err:
-            print(err)
+            print("Erro: ", err)
         else:
             print("Conexão criada!")
     
