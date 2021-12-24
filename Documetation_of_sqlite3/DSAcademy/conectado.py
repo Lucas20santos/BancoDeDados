@@ -15,6 +15,7 @@ class conectado:
             print("Erro: ", err)
         else:
             print("Conexão criada!")
+        return self.con
     
     def fechandoBanco(self) -> None:
         self.con.close()

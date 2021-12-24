@@ -10,7 +10,9 @@ sql_comandos = ["""create table if not exists produtos (
     date text,
     prod_name text,
     valor real
-);"""]
+);""",
+"""
+"""]
 
 for sql in sql_comandos:
     c.sql_create(sql)
